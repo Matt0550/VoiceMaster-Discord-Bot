@@ -1,12 +1,12 @@
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
-[![GitHub issues](https://img.shields.io/github/issues/Matt0550/StageMaster-Discord-Bot)](https://github.com/Matt0550/StageMaster-Discord-Bot/issues)
-[![GitHub repo size](https://img.shields.io/github/repo-size/Matt0550/StageMaster-Discord-Bot)](https://github.com/Matt0550/StageMaster-Discord-Bot/)
-[![GitHub release (latest by date)](https://img.shields.io/github/downloads/Matt0550/StageMaster-Discord-Bot/latest/total)](https://github.com/Matt0550/StageMaster-Discord-Bot/releases)
+[![GitHub issues](https://img.shields.io/github/issues/Matt0550/VoiceMaster-Discord-Bot)](https://github.com/Matt0550/VoiceMaster-Discord-Bot/issues)
+[![GitHub repo size](https://img.shields.io/github/repo-size/Matt0550/VoiceMaster-Discord-Bot)](https://github.com/Matt0550/VoiceMaster-Discord-Bot/)
+[![GitHub release (latest by date)](https://img.shields.io/github/downloads/Matt0550/VoiceMaster-Discord-Bot/latest/total)](https://github.com/Matt0550/VoiceMaster-Discord-Bot/releases)
 [![Discord](https://img.shields.io/discord/828990499507404820)](https://discord.gg/5WrVyQKWAr)
 
 [![GitHub followers](https://img.shields.io/github/followers/Matt0550?style=social)](https://github.com/Matt0550?tab=followers)
-[![GitHub watchers](https://img.shields.io/github/watchers/Matt0550/StageMaster-Discord-Bot?style=social)](https://github.com/Matt0550/StageMaster-Discord-Bot/watchers)
-[![GitHub Repo stars](https://img.shields.io/github/stars/Matt0550/StageMaster-Discord-Bot?style=social)](https://github.com/Matt0550/StageMaster-Discord-Bot/stargazers)
+[![GitHub watchers](https://img.shields.io/github/watchers/Matt0550/VoiceMaster-Discord-Bot?style=social)](https://github.com/Matt0550/VoiceMaster-Discord-Bot/watchers)
+[![GitHub Repo stars](https://img.shields.io/github/stars/Matt0550/VoiceMaster-Discord-Bot?style=social)](https://github.com/Matt0550/VoiceMaster-Discord-Bot/stargazers)
 # VoiceMaster
 
 **VoiceMaster is a discord bot** created to change the way servers work, instead of having permanent channels you can now create temporary ones that delete themselves once they are empty.
