@@ -323,12 +323,12 @@ class voice(commands.Cog):
         conn.commit()
         conn.close()
 
-    @voice.command(aliases=["allow"])
+@voice.command(aliases=["allow"])
     async def permit(self, ctx, member : discord.Member):
         conn = sqlite3.connect(db_path)
         c = conn.cursor()
         id = ctx.author.id
-        c.execute("SELECT stageID FROM voiceChannel WHERE userID = ?", (id,))
+        c.execute("SELECT voiceID FROM voiceChannel WHERE userID = ?", (id,))
         voice=c.fetchone()
         if voice is None:
             await ctx.channel.send(f"❌ {ctx.author.mention} you don't own a channel.")
@@ -336,9 +336,9 @@ class voice(commands.Cog):
         else:
             channelID = voice[0]
             channel = self.bot.get_channel(channelID)
-            await channel.set_permissions(member, connect=True)
-            await ctx.channel.send(f'✅ {ctx.author.mention} You have permited {member.name} to have access to the channel.')
-            print('(' + ctx.author.guild.name + ') ' + ctx.author.name + ' (id: ' + str(ctx.author.id) + ') permited ' + member.name + '(id: ' + member.id + ') to have access to the channel.')
+            await channel.set_permissions(member, connect=True,read_messages=True)
+            await ctx.channel.send(f'✅ {ctx.author.mention} you have permited {member.name} to have access to the channel.')
+            print('(' + ctx.author.guild.name + ') ' + ctx.author.name + ' (id: ' + str(ctx.author.id) + ') permited ' + member.name + '(id: ' + str(member.id) + ') to have access to the channel.')
         conn.commit()
         conn.close()
 
@@ -348,7 +348,7 @@ class voice(commands.Cog):
         c = conn.cursor()
         id = ctx.author.id
         guildID = ctx.guild.id
-        c.execute("SELECT stageID FROM voiceChannel WHERE userID = ?", (id,))
+        c.execute("SELECT voiceID FROM voiceChannel WHERE userID = ?", (id,))
         voice=c.fetchone()
         if voice is None:
             await ctx.channel.send(f"❌ {ctx.author.mention} you don't own a channel.")
@@ -362,9 +362,9 @@ class voice(commands.Cog):
                     voice=c.fetchone()
                     channel2 = self.bot.get_channel(voice[0])
                     await member.move_to(channel2)
-            await channel.set_permissions(member, connect=False,read_messages=True)
+            await channel.set_permissions(member, connect=False,read_messages=False)
             await ctx.channel.send(f':no_entry_sign: {ctx.author.mention} you have rejected {member.name} from accessing the channel.')
-            print('(' + ctx.author.guild.name + ') ' + ctx.author.name + ' (id: ' + str(ctx.author.id) + ') reject ' + member.name + '(id: ' + member.id + ') to have access to the channel.')
+            print('(' + ctx.author.guild.name + ') ' + ctx.author.name + ' (id: ' + str(ctx.author.id) + ') reject ' + member.name + '(id: ' + str(member.id) + ') to have access to the channel.')
         conn.commit()
         conn.close()
 
