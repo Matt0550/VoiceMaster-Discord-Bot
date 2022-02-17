@@ -142,14 +142,14 @@ class voice(commands.Cog):
     @commands.command()
     async def help(self, ctx):
         embed = discord.Embed(title="", description="",color=0x7289da)
-        embed.set_author(name=f"{ctx.guild.me.display_name}",url="https://discordbotc.org/bot/472911936951156740", icon_url=f"{ctx.guild.me.avatar_url}")
-        embed.add_field(name=f'**Commands:**', value=f'**Lock your channel by using the following command:**\n`tc.voice lock`\n------------\n\n'
-                        f'**Unlock your channel by using the following command:**\n`tc.voice unlock`\n------------\n\n'
-                        f'**Change your channel name by using the following command:**\n`tc.voice name <name>`\n**Example:** `tc.voice name EU 5kd+`\n------------\n\n'
-                        f'**Change your channel limit by using the following command:**\n`tc.voice limit number`\n**Example:** `tc.voice limit 2`\n------------\n\n'
-                        f'**Give users permission to join by using the following command:**\n`tc.voice permit @person`\n**Example:** `tc.voice permit @Haxurus#9673`\n------------\n\n'
-                        f'**Claim ownership of channel once the owner has left:**\n`tc.voice claim`\n**Example:** `tc.voice claim`\n------------\n\n'
-                        f'**Remove permission and the user from your channel using the following command:**\n`tc.voice reject @person`\n**Example:** `tc.voice reject @Haxurus#9673`\n', inline='false')
+        embed.set_author(name=f"{ctx.guild.me.display_name}",url="https://discordbo.voiceorg/bot/472911936951156740", icon_url=f"{ctx.guild.me.avatar_url}")
+        embed.add_field(name=f'**Commands:**', value=f'**Lock your channel by using the following command:**\n`.voicevoice lock`\n------------\n\n'
+                        f'**Unlock your channel by using the following command:**\n`.voicevoice unlock`\n------------\n\n'
+                        f'**Change your channel name by using the following command:**\n`.voicevoice name <name>`\n**Example:** `.voicevoice name EU 5kd+`\n------------\n\n'
+                        f'**Change your channel limit by using the following command:**\n`.voicevoice limit number`\n**Example:** `.voicevoice limit 2`\n------------\n\n'
+                        f'**Give users permission to join by using the following command:**\n`.voicevoice permit @person`\n**Example:** `.voicevoice permit @Matt05#6501`\n------------\n\n'
+                        f'**Claim ownership of channel once the owner has left:**\n`.voicevoice claim`\n**Example:** `.voicevoice claim`\n------------\n\n'
+                        f'**Remove permission and the user from your channel using the following command:**\n`.voicevoice reject @person`\n**Example:** `.voicevoice reject @Matt05#6501`\n', inline='false')
         embed.set_footer(text='Bot powered by .gg/locandadiarroway')
         await ctx.channel.send(embed=embed)
 
@@ -221,7 +221,7 @@ class voice(commands.Cog):
                                 await ctx.channel.send("**You are all setup and ready to go!**")
                                 print('\n[SETUP] (' + ctx.author.guild.name + ') ' + ctx.author.name + ' (id: ' + str(ctx.author.id) + ") has completed the setup!\n")
                             except:
-                                await ctx.channel.send("You didn't enter the information properly. Use `tc.voice setup` again!")
+                                await ctx.channel.send("You didn't enter the information properly. Use `.voicevoice setup` again!")
                                 print('\n[ERROR] (' + ctx.author.guild.name + ') ' + ctx.author.name + ' (id: ' + str(ctx.author.id) + ") didn't enter the information properly (setup failed).")
         else:
             await ctx.channel.send(f"{ctx.author.mention} only the owner of the server can setup the bot!")
