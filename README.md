@@ -44,7 +44,7 @@ For setup bot use `.voice setup` command
 For the command list use `.help` command
 
 # Help
-For help join to [my discord](https://discord.gg/5WrVyQKWAr)
+For help join to [my discord](https://discord.gg/S87HpxGCvx)
 
 Or open an [issue here on Github](https://github.com/Matt0550/VoiceMaster-Discord-Bot/issues)
 
